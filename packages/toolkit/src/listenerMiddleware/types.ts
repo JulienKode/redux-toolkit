@@ -488,7 +488,7 @@ export type TypedAddListener<
   T extends string = 'listenerMiddleware/add'
 > = BaseActionCreator<Payload, T> &
   AddListenerOverloads<
-    PayloadAction<Payload, T>,
+    () => void,
     State,
     Dispatch,
     ExtraArgument
